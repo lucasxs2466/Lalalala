@@ -55,7 +55,7 @@ const perguntas = [
 
 let atual = 0;
 let perguntaAtual;
-let hisoriaFinal";
+let hisoriaFinal = "";
 
 function mostraPerguntas (){
 
