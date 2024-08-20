@@ -12,12 +12,12 @@ const perguntas = [
             [
 
                 {
-                    texto: "conseguir a carreira dos sonhos e nunca mais poder faltar trabalho nem tirar férias, com um salário ótimo ",
+                    texto: "1",
                     afirmação: "afirmação",
                 },
 
                 {
-                    texto: "passar na faculdade que você preferir,  nunca poder exercer o que você cursou,  trabalhar com algo que você odeia e tirar férias a cada 3 meses",
+                    texto: "2",
                     afirmação: "afirmação",
                 }]
     },
@@ -27,12 +27,12 @@ const perguntas = [
             [
 
                 {
-                    texto: "poder eliminar o desmatamento na amazônia e nunca mais poder realizar um sonho seu",
+                    texto: "3",
                     afirmação: "afirmação",
                 },
 
                 {
-                    texto: "poder realizar um sonho na hora que quiser e morrer com o aumento do aquecimento global 1 semana depois  (você não pode desejar acabar com o aquecimento global)",
+                    texto: "4",
                     afirmação: "afirmação",
                 }]
     },
@@ -42,12 +42,12 @@ const perguntas = [
             [
 
                 {
-                    texto: "a tecnologia avançar em um nível as pessoas não precisem fazer esforços físicos porém todos os seus dados e vida pessoal serão expostos ",
+                    texto: "5",
                     afirmação: "afirmação",
                 },
 
                 {
-                    texto: "A tecnologia encontrar a cura para todas as doenças porém começaram a ser criados robôs para exilar a humanidade ",
+                    texto: "6",
                     afirmação: "afirmação",
                 }]
     },
@@ -55,6 +55,7 @@ const perguntas = [
 
 let atual = 0;
 let perguntaAtual;
+let hisoriaFinal";
 
 function mostraPerguntas (){
 
@@ -75,11 +76,21 @@ function mostraAlternativas() {
 }
 
 function respostaSelecionada(pergunta){
+    if(atual >= perguntas.lenght){
+        mostraResultado();
+        return;        
+    }
     const afirmacoes = pergunta.afirmacao;
     hisoriaFinal += afirmacoes +" ";
     atual++;
     mostraPerguntas();
 
+}
+
+function mostraResultado(){
+    caixaperguntas.textContent = "";
+    textoresultados.textContent = "historiaFinal";
+    caixaalternativas.textContent = " ";
 }
 
 mostraPerguntas();
