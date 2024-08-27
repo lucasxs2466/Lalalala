@@ -1,95 +1,94 @@
-const caixaprincipal = document.querySelector('.caixa-principal')
-const caixaperguntas = document.querySelector('.caixa-perguntas')
-const caixaalternativas = document.querySelector('.caixa-alternativas')
-const caixaresultados = document.querySelector('.caixa-resultado')
-const textoresultados = document.querySelector('.texto-resultado')
+const caixaPrincipal = document.querySelector(".caixa-pricipal");
+const caixaPerguntas = document.querySelector(".caixa-perguntas");
+const caixaAltermativas = document.querySelector(".caixa-alternativas");
+const caixaResultados = document.querySelector(".caixa-resultado");
+const textoResultado = document.querySelector(".texto-resultado");
+
 
 const perguntas = [
-
     {
-        enunciado: "no ambito social, voce prefere:",
+
+        enunciado: "No âmbito social, você prefere:",
         alternativas:
             [
-
                 {
-                    texto: "1",
-                    afirmação: "afirmação",
+                    texto: "Sorrir com o Patati, porém aumentar a desigualdade no mundo fazendo com que todos entrem em conflitos.",
+                    afirmacao: "Parabéns!!! agora vc sorriu com o patati e aumentou a desigualdade no mundo🤡🤡",
                 },
-
                 {
-                    texto: "2",
-                    afirmação: "afirmação",
-                }]
+                    texto: "Brincar com o Patatá, porém iniciar a 3° Guerra Mundial e se tornar um dos recrutas.",
+                    afirmacao: " Parabéns!!! Você conseguiu brincar com o Patatá, porém condenouo mundo intero à morte, inclusive você",
+                },
+            ]
     },
     {
-        enunciado: "no ambito ambiental, voce prefere:",
+
+        enunciado: "No âmbito ambiental, você prefere:",
         alternativas:
             [
-
                 {
-                    texto: "3",
-                    afirmação: "afirmação",
+                    texto: "Poder escolher o que vai comer para o resto da vida, porém todo mundo terá que beber da água do Rio Senna todo sujo, poluído, podre, capenga, estragado, pela manhã.",
+                    afirmacao: "Parabéns!!! Você agora pode comer tudo o que quer, mas todo vai ter que viver bebendo água podre ",
                 },
-
                 {
-                    texto: "4",
-                    afirmação: "afirmação",
-                }]
+                    texto: "Se tornar filho(a) da Rihanna, porém desmatar a Amazônia inteira junto do Bolsonaro nos cavalos da cavalaria com um isqueiro bic e uma tesoura sem um extintor.",
+                    afirmacao: "Parabéns!!!! Vc nasceu filho da Rihanna, mas desmatou toda a Amazônia junto do Bolsonaro com apenas um inqueiro e uma tesoura sem nenhum extintor",
+                },
+            ]
     },
     {
-        enunciado: "no ambito tecnologico, voce prefere:",
+
+        enunciado: "No âmbito tecnológico, você prefere:",
         alternativas:
             [
-
                 {
-                    texto: "5",
-                    afirmação: "afirmação",
+                    texto: "Se torna a pessoa mais rica do mundo, porém se casar com o Elon Musk e viver com ele sem poder se separar para o resto de suas vidas.",
+                    afirmacao: "Parabéns!!! Vc se tornou a pessoa mais rica do mundo, porém se casou com o velho nojento do Elon Musk",
                 },
-
                 {
-                    texto: "6",
-                    afirmação: "afirmação",
-                }]
-    },
+                    texto: "Descobrir como funciona a inteligência artificial, porém terá que fazer parte de um trisal com a Taylor Swift e o Kanye West e escutar eles cantando todo dia e noite no banho juntos.",
+                    afirmacao: "Parabéns!!! Vc descubriu como funciona a inteligência artifcial, porém está participando de um trisal com a Taylor e o Kanye West e escuta eles cantando toda noite juntos no banho.",
+                },
+            ]
+    }
+
 ]
 
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
 
-function mostraPerguntas (){
-
-    perguntaAtual= perguntas[atual];
-    caixaperguntas.textContent = perguntaAtual.enunciado;
-    caixaalternativas.textContent="";
-    mostraAlternativas();
-}
-
-function mostraAlternativas() {
-    for (const pergunta of perguntaAtual.alternativas)
-    { const botaoAlternativa = document.createElement("button");
-        botaoAlternativa.textContent = pergunta.texto;
-        botaoAlternativa.addEventListener("click", () => respostaSelecionada(pergunta));
-        mostraPerguntas();
-        caixaalternativas.appendChild(botaoAlternativa);
-    }
-}
-
-function respostaSelecionada(pergunta){
+function mostraPerguntas () {
     if(atual >= perguntas.length){
-        mostraResultado();
-        return;        
+      mostraResultado();
+      return;
     }
-    const afirmacoes = pergunta.afirmacao;
-    historiaFinal += afirmacoes +" ";
+     perguntaAtual = perguntas[atual];
+     caixaPerguntas.textContent = perguntaAtual.enunciado;
+     caixaAltermativas.textContent="";
+     mostraAlternativas();
+
+}
+  
+ function mostraAlternativas(){
+    for(const alternativas of perguntaAtual.alternativas){
+        const botaoAlternativa = document.createElement("button");
+        botaoAlternativa.textContent = alternativas.texto;
+        botaoAlternativa.addEventListener("click", () => respostaSelecionada(alternativas));
+        caixaAltermativas.appendChild(botaoAlternativa);
+    }
+
+  }
+
+function respostaSelecionada (alternativas){
+    const afirmacoes = alternativas.afirmacao;
+    historiaFinal += afirmacoes + " ";
     atual++;
     mostraPerguntas();
-
 }
 function mostraResultado(){
-    caixaperguntas.textContent = "";
-    textoresultados.textContent = "historiaFinal";
-    caixaalternativas.textContent = " ";
+caixaPerguntas.textContent = "Em Resumo, as suas escolhas revelaram que você...";
+textoResultado.textContent = historiaFinal;
+caixaAltermativas.textContent = " ";
 }
-
 mostraPerguntas();
