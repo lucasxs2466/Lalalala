@@ -12,12 +12,12 @@ const perguntas = [
         alternativas:
             [
                 {
-                    texto: "Sorrir com o Patati, porém aumentar a desigualdade no mundo fazendo com que todos entrem em conflitos.",
-                    afirmacao: "Parabéns!!! agora vc sorriu com o patati e aumentou a desigualdade no mundo🤡🤡",
+                    texto: "Escolher Squirtle, porém iniciar a 3° Guerra Mundial e se tornar um dos recrutas..",
+                    afirmacao: "Parabéns!!! agora vc tem um Squirtle, mas iniciou uma FODENDO guerra🤡🤡",
                 },
                 {
-                    texto: "Brincar com o Patatá, porém iniciar a 3° Guerra Mundial e se tornar um dos recrutas.",
-                    afirmacao: " Parabéns!!! Você conseguiu brincar com o Patatá, porém condenouo mundo intero à morte, inclusive você",
+                    texto: "Escolher o Charmander, porém a fome mundial triplica.",
+                    afirmacao: " Parabéns!!! Você escolheu o Charmander, porém todos passamos fome👌",
                 },
             ]
     },
@@ -27,12 +27,12 @@ const perguntas = [
         alternativas:
             [
                 {
-                    texto: "Poder escolher o que vai comer para o resto da vida, porém todo mundo terá que beber da água do Rio Senna todo sujo, poluído, podre, capenga, estragado, pela manhã.",
-                    afirmacao: "Parabéns!!! Você agora pode comer tudo o que quer, mas todo vai ter que viver bebendo água podre ",
+                    texto: "Poder escolher entre qualquer Pókemon, porém todo mundo terá que abandonar seus animais domesticos na rua do rio Senna.",
+                    afirmacao: "Parabéns!!! Você agora pode ter um Pókemon, porém todos irão abandonar seus animais. ",
                 },
                 {
-                    texto: "Se tornar filho(a) da Rihanna, porém desmatar a Amazônia inteira junto do Bolsonaro nos cavalos da cavalaria com um isqueiro bic e uma tesoura sem um extintor.",
-                    afirmacao: "Parabéns!!!! Vc nasceu filho da Rihanna, mas desmatou toda a Amazônia junto do Bolsonaro com apenas um inqueiro e uma tesoura sem nenhum extintor",
+                    texto: "Você se torna imortal, porém terá que corta 10 árvores da Amazônia todo dia.",
+                    afirmacao: "Parabéns!!!! Vc se torna imortal, mas desmatou desmata uma floresta toda semana.",
                 },
             ]
     },
@@ -42,12 +42,12 @@ const perguntas = [
         alternativas:
             [
                 {
-                    texto: "Se torna a pessoa mais rica do mundo, porém se casar com o Elon Musk e viver com ele sem poder se separar para o resto de suas vidas.",
-                    afirmacao: "Parabéns!!! Vc se tornou a pessoa mais rica do mundo, porém se casou com o velho nojento do Elon Musk",
+                    texto: "Se torna a pessoa mais rica do mundo, porém o mundo é dominado pela inteligência artificial.",
+                    afirmacao: "Parabéns!!! Vc se tornou a pessoa mais rica do mundo, porém o mundo é uma merda.",
                 },
                 {
-                    texto: "Descobrir como funciona a inteligência artificial, porém terá que fazer parte de um trisal com a Taylor Swift e o Kanye West e escutar eles cantando todo dia e noite no banho juntos.",
-                    afirmacao: "Parabéns!!! Vc descubriu como funciona a inteligência artifcial, porém está participando de um trisal com a Taylor e o Kanye West e escuta eles cantando toda noite juntos no banho.",
+                    texto: "Vc tem um computador que te dá todas as respostas possiveis, mas ele é alimentado por cérebros reais .",
+                    afirmacao: "Parabéns!!! vc tem o pc mais inteligentes do mundo, porém precisa matar uma pessoa por dia.",
                 },
             ]
     }
